@@ -1,0 +1,99 @@
+.wrapper {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  border: 1.5px solid var(--border);
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  display: block;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.duration {
+  color: var(--text-light);
+  font-size: 0.88rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.city {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.arrow {
+  color: var(--primary);
+  font-size: 1rem;
+  transform: rotate(-30deg);
+  display: inline-block;
+}
+
+.price {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.price strong {
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
