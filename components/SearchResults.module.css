@@ -1,0 +1,162 @@
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 0.97rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 1.5px solid var(--border);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.cardLeft {
+  min-width: 110px;
+}
+
+.airline {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.flightId {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.cardCenter {
+  flex: 1;
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.time {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  min-width: 52px;
+}
+
+.durationLine {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.durationText {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--border) 100%);
+  border-radius: 2px;
+}
+
+.stops {
+  font-size: 0.78rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.routeRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  padding: 0 2px;
+}
+
+.cardRight {
+  text-align: right;
+  min-width: 120px;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.perPerson {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.bookBtn {
+  background: linear-gradient(90deg, #1a56db, #1e429f);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.bookBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .cardRight {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .perPerson {
+    margin-bottom: 0;
+  }
+}
